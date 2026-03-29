@@ -90,7 +90,7 @@ namespace OptimaJet.DWKit.StarterApplication
                     defaults: new { controller = "Account", action = "Index" });
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=StarterApplication}/{action=Index}/");
+                    template: "{controller=StarterApplication}/{action=Store}/");
             });
             
             app.UseSignalR(routes =>

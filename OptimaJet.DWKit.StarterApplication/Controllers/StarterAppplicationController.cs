@@ -14,8 +14,14 @@ namespace OptimaJet.DWKit.StarterApplication.Controllers
     public class StarterApplicationController : Controller
     {
         // GET: /<controller>/
-      
+
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public IActionResult Store()
         {
             return View();
         }
