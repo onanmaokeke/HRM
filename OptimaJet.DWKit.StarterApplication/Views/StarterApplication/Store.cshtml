@@ -1,0 +1,88 @@
+@{
+    Layout = "_Layout";
+    var buyNowStripeLink = "https://buy.stripe.com/your-buy-now-link";
+    var addToCartStripeLink = "https://buy.stripe.com/your-add-to-cart-link";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/css/store.css")" rel="stylesheet" type="text/css" />
+}
+
+<main class="one-product-store">
+    <header class="store-header">
+        <div class="store-header__brand">Idle Hour</div>
+        <nav class="store-header__nav" aria-label="Primary">
+            <a href="#story">Story</a>
+            <a href="#details">Details</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="top">
+        <div class="hero__content">
+            <p class="hero__eyebrow">Single Product Release</p>
+            <h1 class="hero__title">Ceremonial Matcha Set</h1>
+            <p class="hero__subtitle">
+                A minimalist daily ritual kit featuring shade-grown ceremonial grade matcha,
+                artisan tea bowl, and handcrafted bamboo whisk.
+            </p>
+            <div class="hero__price">$84.00</div>
+            <div class="hero__actions">
+                <a class="btn btn--primary" href="@buyNowStripeLink" target="_blank" rel="noopener noreferrer">
+                    Buy Now
+                </a>
+                <a class="btn btn--secondary" href="@addToCartStripeLink" target="_blank" rel="noopener noreferrer">
+                    Add to Cart Now
+                </a>
+            </div>
+            <p class="hero__hint">Replace the two Stripe URLs at the top of this file when your links are ready.</p>
+        </div>
+        <div class="hero__media" role="img" aria-label="Ceremonial matcha set on a neutral backdrop"></div>
+    </section>
+
+    <section class="story" id="story">
+        <article>
+            <h2>Inspired by calm, designed for daily use</h2>
+            <p>
+                This one-product store is intentionally focused: one premium kit, one clear promise,
+                and one effortless path to checkout.
+            </p>
+        </article>
+        <article>
+            <h2>What is included</h2>
+            <ul>
+                <li>30g ceremonial grade matcha (first harvest)</li>
+                <li>Hand-thrown tea bowl in matte glaze</li>
+                <li>Bamboo whisk and scoop set</li>
+                <li>Brewing card with recommended ratios</li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="details" id="details">
+        <div class="details__card">
+            <h3>Tasting Notes</h3>
+            <p>Silky texture, sweet grass finish, and low bitterness when prepared at 75-80C.</p>
+        </div>
+        <div class="details__card">
+            <h3>Shipping</h3>
+            <p>Ships in 2-4 business days in recyclable packaging with tracked delivery.</p>
+        </div>
+        <div class="details__card">
+            <h3>Returns</h3>
+            <p>14-day returns on unopened matcha and unused accessories.</p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to start your ritual?</h2>
+        <a class="btn btn--primary" href="@buyNowStripeLink" target="_blank" rel="noopener noreferrer">
+            Buy Now
+        </a>
+    </section>
+
+    <footer class="store-footer" id="faq">
+        <p><strong>FAQ:</strong> Both checkout buttons currently use placeholder Stripe links.</p>
+        <p>Update them in <code>Views/StarterApplication/Store.cshtml</code>.</p>
+    </footer>
+</main>
